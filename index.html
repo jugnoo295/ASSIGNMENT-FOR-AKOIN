@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute of Digital Risk | IDR</title>
+    <style>
+        :root { 
+            --orange: #FF6600; 
+            --black: #1a1a1a; 
+            --white: #ffffff; 
+            --gray: #f4f4f4; 
+        }
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', sans-serif; 
+        }
+        header { 
+            position: sticky; 
+            top: 0; 
+            background: var(--white); 
+            padding: 0.2rem 2%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            z-index: 1000; 
+        }
+        img{
+            height : 6rem;
+        }
+        nav a { 
+            margin-left: 20px; 
+            color: var(--black); 
+            border: 2px solid transparent;
+            border-radius: 15%;
+            transition: border-color 0.5s, color 0.3s; 
+            text-decoration: none; 
+            padding: 5px 10px;
+        }
+        nav a:hover { 
+            color: var(--orange);
+            border: 2px solid black;
+        }
+
+        .hero { 
+            height: 80vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background: var(--black); 
+            color: var(--white); 
+            padding: 0 10%; 
+        }
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 1rem; 
+        }
+        .hero p { 
+            font-size: 1.2rem; 
+            max-width: 800px; 
+            margin-bottom: 2rem; 
+            color: #ccc; 
+        }
+        .btn { 
+            padding: 15px 30px; 
+            background: var(--orange); 
+            color: var(--white); 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: 0.3s; 
+        }
+        .btn:hover { 
+            background: #e55b00; 
+            transform: translateY(-2px); 
+        }
+
+        section { 
+            padding: 80px 10%; 
+        }
+        .about { 
+            background: var(--white); 
+        }
+        .pillars { 
+            background: var(--gray); 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 30px; 
+        }
+        .card { 
+            background: var(--white); 
+            padding: 30px; 
+            border-bottom: 4px solid var(--orange); 
+            border-radius: 4px; 
+        }
+        .card h3 { 
+            margin-bottom: 15px; 
+            color: var(--orange); 
+        }
+        .contact { 
+            background: var(--white); 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+        form { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+        }
+        input, textarea { 
+            padding: 12px; 
+            border: 1px solid #ddd;
+        }
+        footer { 
+            background: var(--black); 
+            color: var(--white); 
+            text-align: center; 
+            padding: 2rem; 
+        }
+        /* for mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            header { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="IDR logo.png">
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#pillars">Programs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Advancing the Future of Digital Risk</h1>
+        <p>IDR trains and deploys digital risk practitioners, combining academic collaboration and industry practice to secure high-consequence environments.</p>
+        <a href="#pillars" class="btn">Explore Programs</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About IDR</h2>
+        <p style="margin-top: 20px;">The Institute of Digital Risk is an industry-led training and deployment institute for digital, cyber, and technology risk roles in regulated environments. We bridge the gap between academic insight through our UK university partnerships and real-world project deployment.</p>
+    </section>
+
+    <section id="pillars" class="pillars">
+        <div class="card">
+            <h3>Academy</h3>
+            <p>Intensive bootcamps and training for students and professionals entering the risk field.</p>
+        </div>
+        <div class="card">
+            <h3>Innovation</h3>
+            <p>Developing IP, future risk models, and robust AI governance frameworks.</p>
+        </div>
+        <div class="card">
+            <h3>Advisory</h3>
+            <p>Helping organisations implement critical frameworks like NIST, ISO 27001, and NIS2.</p>
+        </div>
+    </section>
+
+    <section id="community" class="about">
+        <h2>Our Community</h2>
+        <p style="margin-top: 20px;">We serve students, early-career professionals, and practitioners in financial services and critical infrastructure seeking to upskill in digital and cyber risk.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Register Interest</h2>
+        <form id="idrForm">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Message" rows="5"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Institute of Digital Risk. All rights reserved.</p>
+    </footer>
+</body>
+</html>
